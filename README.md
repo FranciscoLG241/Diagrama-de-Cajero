@@ -40,7 +40,7 @@ rectangle "Cajero Automático" {
 1. El cliente inserta su tarjeta y el PIN en el cajero automático.  
 2. El sistema verifica la autenticidad de la tarjeta y la validez del PIN.  
 3. Si la información es correcta, el sistema permite el acceso del cliente al cajero automático.  
-4. Se muestra el menú principal con las opciones disponibles (retirar dinero, consultar saldo, transferencias, etc.).  
+4. Se muestra el menú principal con las opciones disponibles. 
 
 #### Flujo Alternativo
 - **PIN incorrecto:** Si el PIN ingresado es incorrecto, el sistema muestra un mensaje de error y solicita al cliente volver a intentarlo. Después de varios intentos fallidos, el sistema bloquea la tarjeta por seguridad.  
@@ -65,7 +65,7 @@ rectangle "Cajero Automático" {
 
 #### Flujo Normal
 1. El cliente selecciona la opción **"Realizar transferencia"**.  
-2. El sistema solicita al cliente ingresar los datos del beneficiario (número de cuenta, monto a transferir, etc.).  
+2. El sistema solicita al cliente ingresar los datos del beneficiario.
 3. El sistema verifica que la cuenta del beneficiario sea válida y que el cliente tenga suficiente saldo para realizar la transferencia.  
 4. Si todo es correcto, el sistema procesa la transferencia y muestra un mensaje de confirmación.  
 
