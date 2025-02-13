@@ -84,8 +84,8 @@ rectangle "Cajero Automático" {
 4. Una vez que se ha ingresado correctamente el dinero, el sistema muestra un mensaje de confirmación y actualiza el saldo de la cuenta.  
 
 #### Flujo en caso de **ERROR**
-- **Dinero no válido:** Si el cajero detecta que el dinero insertado no es válido (por ejemplo, billetes rotos o falsificados), el sistema muestra un mensaje de error y solicita que se inserte dinero válido.  
-- **Problema de validación:** Si el sistema no puede validar correctamente el dinero (por problemas técnicos), muestra un mensaje de error y solicita al cliente que intente nuevamente.  
+- **Dinero no válido:** Si el cajero detecta que el dinero insertado no es válido, el sistema muestra un mensaje de error y solicita que se inserte dinero válido.  
+- **Problema de validación:** Si el sistema no puede validar correctamente el dinero por problemas del propio cajero, muestra un mensaje de error y solicita al cliente que intente nuevamente.  
 
 
 
