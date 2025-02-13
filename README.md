@@ -33,6 +33,64 @@ rectangle "Cajero Automático" {
 ```
 
 
+
+### Caso de Uso: Validar Usuario
+
+#### Flujo Normal
+1. El cliente inserta su tarjeta y el PIN en el cajero automático.  
+2. El sistema verifica la autenticidad de la tarjeta y la validez del PIN.  
+3. Si la información es correcta, el sistema permite el acceso del cliente al cajero automático.  
+4. Se muestra el menú principal con las opciones disponibles (retirar dinero, consultar saldo, transferencias, etc.).  
+
+#### Flujo Alternativo
+- **PIN incorrecto:** Si el PIN ingresado es incorrecto, el sistema muestra un mensaje de error y solicita al cliente volver a intentarlo. Después de varios intentos fallidos, el sistema bloquea la tarjeta por seguridad.  
+- **Tarjeta inválida:** Si el sistema no puede leer la tarjeta o es inválida, muestra un mensaje de error y solicita que se intente con otra tarjeta.  
+
+
+
+### Caso de Uso: Verificar Límite Diario
+
+#### Flujo Normal
+1. El cliente selecciona la opción de **"Sacar dinero"**.  
+2. El sistema solicita que ingrese el monto a retirar.  
+3. El sistema verifica si la cantidad solicitada está dentro del límite diario permitido por la cuenta del cliente.  
+4. Si la transacción está dentro del límite, el sistema permite continuar con la operación.  
+
+#### Flujo Alternativo
+- **Límite diario excedido:** Si el monto solicitado supera el límite diario permitido, el sistema muestra un mensaje de advertencia y solicita al cliente que ingrese una cantidad menor.  
+
+
+
+### Caso de Uso: Realizar Transferencia
+
+#### Flujo Normal
+1. El cliente selecciona la opción **"Realizar transferencia"**.  
+2. El sistema solicita al cliente ingresar los datos del beneficiario (número de cuenta, monto a transferir, etc.).  
+3. El sistema verifica que la cuenta del beneficiario sea válida y que el cliente tenga suficiente saldo para realizar la transferencia.  
+4. Si todo es correcto, el sistema procesa la transferencia y muestra un mensaje de confirmación.  
+
+#### Flujo Alternativo
+- **Saldo insuficiente:** Si el cliente no tiene suficiente saldo para realizar la transferencia, el sistema muestra un mensaje de error y no procesa la operación.  
+- **Cuenta beneficiario inválida:** Si la cuenta del beneficiario no es válida, el sistema muestra un mensaje de error y solicita al cliente verificar los datos.  
+
+
+
+### Caso de Uso: Ingresar Dinero
+
+#### Flujo Normal
+1. El cliente selecciona la opción **"Ingresar dinero"**.  
+2. El sistema solicita que el cliente inserte el dinero en el cajero automático.  
+3. El sistema verifica que el dinero insertado sea válido y lo suma al saldo de la cuenta del cliente.  
+4. Una vez que se ha ingresado correctamente el dinero, el sistema muestra un mensaje de confirmación y actualiza el saldo de la cuenta.  
+
+#### Flujo Alternativo
+- **Dinero no válido:** Si el cajero detecta que el dinero insertado no es válido (por ejemplo, billetes rotos o falsificados), el sistema muestra un mensaje de error y solicita que se inserte dinero válido.  
+- **Problema de validación:** Si el sistema no puede validar correctamente el dinero (por problemas técnicos), muestra un mensaje de error y solicita al cliente que intente nuevamente.  
+
+
+
+
+
 ### Caso de Uso: Sacar Dinero
 
 #### Flujo Normal
